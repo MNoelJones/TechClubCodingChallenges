@@ -4,7 +4,7 @@ CPP=g++
 %.o: %.cpp
 	$(CPP) -c -o $@ $<
 
-beepboopbook: test.o beepboopbook.o
+beepboopbook: test.o beepboopbook.o book.o
 	$(CPP) -o $@ $^
 
 all: beepboopbook
@@ -14,3 +14,4 @@ clean:
 
 test.o: beepboopbook.h
 beepboopbook.o: beepboopbook.h
+book.o: book.h
