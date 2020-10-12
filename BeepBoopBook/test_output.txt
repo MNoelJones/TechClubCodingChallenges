@@ -1,11 +1,14 @@
 Challenge 1
 f(5, 3) = 1
+Cannot turn pages past start of book
 f(10, 1) = 0
 f(400, 15) = 7
 ... PASSED!
 Challenge 2
 f(5, 3) = 1
+Cannot turn pages past start of book
 f(10, 1) = 0
+Cannot turn pages past end of book
 f(6, 6) = 0
 f(6, 5) = 1
 f(10, 6) = 2
