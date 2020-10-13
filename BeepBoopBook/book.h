@@ -20,7 +20,8 @@ class Book
 	int number_of_pages;
 	int first_page_number;
 	int current_page;
-	bool is_current_page_on_right();
 	bool first_page_is_on_right;
+	bool is_current_page_on_right();
+	void notify_page_turn();
 };
 

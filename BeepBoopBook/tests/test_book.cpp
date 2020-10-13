@@ -14,7 +14,7 @@ void test_1()
 	assert(book != NULL);
 	assert(book->get_current_page_number() == 1);
 	book->turn_page();
-	assert(book->get_current_page_number() == 3);
+	assert(book->get_current_page_number() == 2);
 	book->turn_page(true);
 	assert(book->get_current_page_number() == 1);
 }
@@ -28,6 +28,7 @@ void test_2()
 	book->turn_page();
 	assert(!book->is_page_visible(1));
 	assert(book->is_page_visible(3));
+	assert(book->is_page_visible(2));
 }
 
 void test_3()
@@ -66,6 +67,6 @@ int main(void)
 	test_1();
 	test_2();
 	test_3();
-	test_4();
+	// test_4();
 	return 0;
 }

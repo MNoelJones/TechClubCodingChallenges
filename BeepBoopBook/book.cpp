@@ -3,10 +3,30 @@
 
 using namespace std;
 
+void Book::notify_page_turn()
+{
+
+}
+
 void Book::turn_pages(int count, bool backwards)
 {
+	for (int i = 0; i < count; ++i)
+	{
+		this->turn_page(backwards);
+	}
+}
+
+void Book::turn_page(bool backwards)
+{
 	const int direction = (backwards ? -1 : 1);
-	const int expected_page = (count * 2 * direction) + this->current_page;
+	const int expected_page = direction + this->current_page;
+	if (
+		(this->is_current_page_on_right() && !backwards) ||
+		(!this->is_current_page_on_right() && backwards)
+	)
+	{
+		this->notify_page_turn();
+	}
 	if (expected_page > this->number_of_pages)
 	{
 		cout << "Cannot turn pages past end of book" << endl;
@@ -21,11 +41,6 @@ void Book::turn_pages(int count, bool backwards)
 	{
 		this->current_page = expected_page;
 	}
-}
-
-void Book::turn_page(bool backwards)
-{
-	this->turn_pages(1, backwards);
 }
 
 bool Book::is_current_page_on_right()

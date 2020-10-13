@@ -13,8 +13,8 @@ tests/test_book: tests/test_book.o book.o
 all: beepboopbook tests/test_book
 
 clean:
-	rm *.o
-	rm tests/*.o
+	-@rm *.o
+	-@rm tests/*.o
 
 tests/test.o: beepboopbook.h
 beepboopbook.o: beepboopbook.h
