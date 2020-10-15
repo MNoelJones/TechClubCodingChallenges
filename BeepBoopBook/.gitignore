@@ -1,3 +1,5 @@
 *.o
 beepboopbook
 
+*.sublime-project
+*.sublime-workspace
