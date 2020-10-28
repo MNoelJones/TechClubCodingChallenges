@@ -1,0 +1,1 @@
+int seconds_in_days(int days);
