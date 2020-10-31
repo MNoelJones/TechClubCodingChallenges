@@ -28,7 +28,7 @@ public:
 	Seconds(int count) : TimeUnit(count) {};
 	int in_seconds()
 	{
-		return thi	s->get_count();
+		return this->get_count();
 	}
 };
 
