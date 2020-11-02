@@ -9,6 +9,9 @@ all: tests/test
 tests/test: tests/test.o codingchallenge0.o
 	$(CPP) -o $@ $^
 
+run: tests/test
+	tests/test
+
 clean:
 	-@rm *.o
 	-@rm tests/*.o
