@@ -52,7 +52,5 @@ public:
 
 int seconds_in_days(int days)
 {
-	Days* d = new Days(days);
-
-	return d->in_seconds();
+	return Days(days).in_seconds();
 }
