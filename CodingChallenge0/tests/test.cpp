@@ -1,7 +1,8 @@
 // tests.cpp
 #include <cassert>
 #include <iostream>
-#include "codingchallenge0.h"
+#include "codingchallenge0_0.h"
+#include "codingchallenge0_1.h"
 
 using namespace std;
 
@@ -13,7 +14,9 @@ void challenge0()
 
 void challenge1()
 {
-	assert(false);
+	float height = height_given_time(5);
+	cout << "height_given_time(5) = " << height << endl;
+	assert(height == 122.5);
 	return;
 }
 

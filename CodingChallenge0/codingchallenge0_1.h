@@ -1,0 +1,1 @@
+float height_given_time(int time);
